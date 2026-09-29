@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejercicio de Luffy - Drag & Drop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Suma los Luffy</h1>
+    <p id="operacion" class="operacion">? + ? = ?</p>
+
+    <section class="fila">
+      <div>
+        <h2>Grupo 1</h2>
+        <div id="grupo1" class="caja"></div>
+      </div>
+      <div>
+        <h2>Grupo 2</h2>
+        <div id="grupo2" class="caja"></div>
+      </div>
+    </section>
+
+    <section class="fila">
+      <div class="fabrica">
+        <h2>Fábrica</h2>
+        <p class="ayuda">Arrastra a Luffy o haz clic para crear copias.</p>
+        <!-- Imagen estática: nunca se mueve, solo se clona -->
+        <img id="luffy-original" src="img/luffy.png" alt="Luffy" draggable="true">
+      </div>
+
+      <div>
+        <h2>Tu respuesta</h2>
+        <div id="destino" class="caja destino"></div>
+        <p class="ayuda">Clic sobre un Luffy de tu respuesta para quitarla.</p>
+      </div>
+    </section>
+
+    <section class="acciones">
+      <button id="btn-comprobar">Comprobar</button>
+      <button id="btn-vaciar" class="secundario">Vaciar respuesta</button>
+      <button id="btn-nueva" class="secundario">Nueva operación</button>
+    </section>
+
+    <p id="resultado" class="resultado" role="status"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
